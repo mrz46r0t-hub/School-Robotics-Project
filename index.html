@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics Strategic Partners</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0b0b0b;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            padding: 60px 20px;
+            background: radial-gradient(circle at center, #1db954 0%, #0b0b0b 100%);
+        }
+        h1 { font-size: 2.5em; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px 15px;
+        }
+        .card {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 30px;
+            width: 280px;
+            transition: 0.3s;
+        }
+        .card:hover { border-color: #1db954; transform: translateY(-5px); }
+        .price { font-size: 1.4em; font-weight: bold; margin: 15px 0; color: #1db954; }
+        ul { list-style: none; padding: 0; text-align: left; font-size: 0.9em; color: #ccc; }
+        ul li { margin: 10px 0; }
+        ul li::before { content: "✓ "; color: #1db954; }
+        
+        .contact-section { background-color: #111; padding: 50px 20px; border-top: 1px solid #222; }
+        form { max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+        input, select, button { padding: 15px; border-radius: 8px; border: 1px solid #333; font-size: 1em; }
+        input, select { background-color: #222; color: white; }
+        button { background-color: #1db954; color: black; font-weight: bold; border: none; cursor: pointer; transition: 0.2s; }
+        button:hover { background-color: #1ed760; transform: scale(1.02); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Invest in Robotics</h1>
+        <p>Масштабируем инновации из Атырау</p>
+    </header>
+
+    <div class="pricing-container">
+        <div class="card">
+            <h2 style="color: #cd7f32;">BRONZE</h2>
+            <div class="price">300k — 500k ₸</div>
+            <ul>
+                <li>Логотип на сайте проекта</li>
+                <li>Пост благодарности в соцсетях</li>
+                <li>Сертификат партнера</li>
+            </ul>
+        </div>
+        <div class="card" style="border-color: #1db954;">
+            <h2 style="color: #e5e4e2;">SILVER</h2>
+            <div class="price">800k — 1.2M ₸</div>
+            <ul>
+                <li>Все из Bronze</li>
+                <li>Логотип на корпусе устройства</li>
+                <li>Упоминание в региональных СМИ</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h2 style="color: #ffcc00;">GOLD</h2>
+            <div class="price">2 000 000+ ₸</div>
+            <ul>
+                <li>Генеральный партнер проекта</li>
+                <li>Крупный лого на форме команды</li>
+                <li>Индивидуальная презентация</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <h3>Стать спонсором</h3>
+        <p style="color: #888; margin-bottom: 20px;">Заполните данные для перехода к оплате</p>
+        <form id="sponsorForm">
+            <input type="text" id="company" placeholder="Ваша компания / ФИО" required>
+            <input type="tel" id="phone" placeholder="Контактный номер" required>
+            <select id="package" required>
+                <option value="" disabled selected>Выберите пакет</option>
+                <option value="Bronze (300k-500k)">Bronze (300k-500k)</option>
+                <option value="Silver (800k-1.2M)">Silver (800k-1.2M)</option>
+                <option value="Gold (2M+)">Gold (2M+)</option>
+            </select>
+            <button type="submit">Связаться и оплатить</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('sponsorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const company = document.getElementById('company').value;
+            const phone = document.getElementById('phone').value;
+            const pkg = document.getElementById('package').value;
+            
+            // Номер Расула
+            const myNumber = "77756168868"; 
+            
+            const msg = `Здравствуйте! Мы хотим поддержать ваш проект.%0A%0A🏢 Компания: ${company}%0A🏆 Пакет: ${pkg}%0A📞 Контакт: ${phone}%0A%0AЖдем реквизиты для совершения оплаты.`;
+            
+            window.open(`https://wa.me/${myNumber}?text=${msg}`, '_blank');
+        });
+    </script>
+</body>
+</html>
