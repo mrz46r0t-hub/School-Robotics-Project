@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakerHub | Robotics Partnership</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 80px 20px;
+            background-color: #0d1117;
+            border-bottom: 1px solid #30363d;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin: 0;
+            color: #f0f6fc;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            color: #8b949e;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 32px;
+            width: 300px;
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .card:hover {
+            border-color: #58a6ff;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+
+        .card h2 {
+            margin: 0;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 20px 0;
+            color: #f0f6fc;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        ul li {
+            margin: 12px 0;
+            font-size: 14px;
+            color: #8b949e;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #58a6ff;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: 0;
+        }
+
+        .contact-section {
+            background-color: #0d1117;
+            padding: 80px 20px;
+            border-top: 1px solid #30363d;
+            text-align: center;
+        }
+
+        .contact-section h3 {
+            font-size: 28px;
+            color: #f0f6fc;
+            margin-bottom: 10px;
+        }
+
+        form {
+            max-width: 440px;
+            margin: 40px auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        input, select {
+            padding: 14px;
+            border-radius: 6px;
+            border: 1px solid #30363d;
+            background-color: #0d1117;
+            color: #f0f6fc;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input:focus, select:focus {
+            border-color: #58a6ff;
+            box-shadow: 0 0 0 3px rgba(31, 111, 235, 0.3);
+        }
+
+        button {
+            padding: 16px;
+            border-radius: 6px;
+            background-color: #238636;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 16px;
+            border: 1px solid rgba(240, 246, 252, 0.1);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #2ea043;
+        }
+
+        .bronze-text { color: #d97706; }
+        .silver-text { color: #94a3b8; }
+        .gold-text { color: #fbbf24; }
+
+        @media (max-width: 768px) {
+            .pricing-container { flex-direction: column; align-items: center; }
+            .card { width: 100%; max-width: 350px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Invest in Robotics</h1>
+        <p>Поддержите технологическое развитие региона Атырау</p>
+    </header>
+
+    <div class="pricing-container">
+        <div class="card">
+            <h2 class="bronze-text">Bronze</h2>
+            <div class="price">300k — 500k ₸</div>
+            <ul>
+                <li>Логотип на сайте проекта</li>
+                <li>Пост благодарности в соцсетях</li>
+                <li>Сертификат партнера</li>
+            </ul>
+        </div>
+
+        <div class="card" style="border-color: #30363d;">
+            <h2 class="silver-text">Silver</h2>
+            <div class="price">800k — 1.2M ₸</div>
+            <ul>
+                <li>Все преимущества Bronze</li>
+                <li>Логотип на корпусе устройства</li>
+                <li>Упоминание в региональных СМИ</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="gold-text">Gold</h2>
+            <div class="price">2 000 000+ ₸</div>
+            <ul>
+                <li>Генеральный партнер проекта</li>
+                <li>Крупный лого на форме команды</li>
+                <li>Индивидуальная презентация</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        <h3>Стать спонсором</h3>
+        <p style="color: #8b949e;">Оставьте заявку, и мы свяжемся с вами для обсуждения деталей</p>
+        
+        <form id="sponsorForm">
+            <input type="text" id="company" placeholder="Название компании / ФИО" required>
+            <input type="tel" id="phone" placeholder="Контактный телефон" required>
+            <select id="package" required>
+                <option value="" disabled selected>Выберите пакет поддержки</option>
+                <option value="Bronze (300k-500k)">Bronze (300k-500k)</option>
+                <option value="Silver (800k-1.2M)">Silver (800k-1.2M)</option>
+                <option value="Gold (2M+)">Gold (2M+)</option>
+            </select>
+            <button type="submit">Связаться с командой</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('sponsorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const company = document.getElementById('company').value;
+            const phone = document.getElementById('phone').value;
+            const pkg = document.getElementById('package').value;
+            
+            const myNumber = "77756168868";
+            
+            const msg = `Здравствуйте! Мы хотим поддержать ваш проект.%0A%0A🏢 Компания: ${company}%0A🏆 Пакет: ${pkg}%0A📞 Контакт: ${phone}%0A%0AЖдем подробную информацию для сотрудничества.`;
+            
+            window.open(`https://wa.me/${myNumber}?text=${msg}`, '_blank');
+        });
+    </script>
+</body>
+</html>
